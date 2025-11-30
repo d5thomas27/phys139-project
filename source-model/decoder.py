@@ -1314,7 +1314,7 @@ if __name__ == '__main__':
       created at the specified destination.
   """
   # path of databases (must exist)
-  db_path = "../db/"
+  db_path = "db/"
 
   # filenames of databases (this must be sqlite3 databases)
   train_fname = "surf17_train.db"
@@ -1335,7 +1335,7 @@ if __name__ == '__main__':
   existing files might be overwritten.
   """
   # path for feedback and checkpoints (must exist and be empty)
-  checkpoint_path =  "../checkpoints/"
+  checkpoint_path =  "checkpoints/"
   feedback_fname = "feedback"
 
   # # # Initialize an instance of the decoder # # #
