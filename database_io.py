@@ -24,9 +24,9 @@ class DatabaseIO:
     store_in_RAM -- if True the databases will be stored in the RAM
     """
 
-    self.training_conn = sqlite3.connect(training_fname)
-    self.validation_conn = sqlite3.connect(validation_fname)
-    self.test_conn = sqlite3.connect(test_fname)
+    self.training_conn = sqlite3.connect(training_fname, check_same_thread=False)
+    self.validation_conn = sqlite3.connect(validation_fname, check_same_thread=False)
+    self.test_conn = sqlite3.connect(test_fname, check_same_thread=False)
 
     training_c = self.training_conn.cursor()
     validation_c = self.validation_conn.cursor()
