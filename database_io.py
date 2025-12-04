@@ -169,7 +169,7 @@ class DatabaseIO:
     the final syndrome increments, length information for the first
     network, for the second network, and the final parities
     """
-
+  
     # select data from the corresponding database
     if data_type == "training":
       c = self.training_conn.cursor()
@@ -179,7 +179,7 @@ class DatabaseIO:
       c = self.test_conn.cursor()
     else:
       raise ValueError("The only allowed data_types are: 'training', "
-                       "'validation' and 'test'.")
+                      "'validation' and 'test'.")
     if oversample:
       c.execute("SELECT events, err_signal, parities " +
                 "FROM data ORDER BY RANDOM() LIMIT ?",
